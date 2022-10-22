@@ -2,7 +2,9 @@ import livros from "../models/Livro.js";
 
 class LivroController {
   static showBooks = (req, res) => {
-    livros.find((err, livros) => {
+    livros.find()
+      .populate('autor')
+      .exec((err, livros) => {
       res.status(200).json(livros);
     });
   }
@@ -10,13 +12,26 @@ class LivroController {
   static showBookByID = (req, res) => {
     const id = req.params.id;
 
-    livros.findById(id, (err, livros) => {
+    livros.findById(id)
+      .populate('autor', 'nome')
+      .exec((err, livros) => {
       if(err) {
         res.status(400).send({ message: `${err.message} - ID do livro nao localizada ou inexistente` });
       } else {
         res.status(200).send(livros);
       };
     });
+  }
+
+  static showBooksByPublisher = (req, res) => {
+    const publisher = req.query.editora
+
+    livros.find({ "editora": publisher }, {}, (err, livros) => {
+      if(err) {
+        res.status(400).send({ message: `${err.message} - Livro(s) nao localizado(s) ou inexistente(s)` })
+      }
+      res.status(200).send(livros);
+    })
   }
 
   static registerBook = (req, res) => {
