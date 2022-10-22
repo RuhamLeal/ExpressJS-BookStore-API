@@ -14,18 +14,9 @@ app.use(express.json());
 
 routes(app);
 
-app.get('/', (req, res) => {
-  res.status(200).send('Aprendendo Node');
-});
-
 app.get('/livros/:id', (req, res) => {
   const index = findBooks(req.params.id);
   res.json(livros[index]);
-});
-
-app.post('/livros', (req, res) => {
-  livros.push(req.body);
-  res.status(201).send('Livro cadastrado com sucesso');
 });
 
 app.put('/livros/:id', (req, res) => {
