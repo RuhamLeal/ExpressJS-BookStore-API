@@ -28,9 +28,17 @@ app.post('/livros', (req, res) => {
 });
 
 app.put('/livros/:id', (req, res) => {
-  const index = findBooks(req.params.id);
-  livros[index].titulo = req.body.titulo;
+  const { params, body } = req;
+  const index = findBooks(params.id);
+  livros[index].titulo = body.titulo;
   res.json(livros);
+});
+
+app.delete('/livros/:id', (req, res) => {
+  const { id } = req.params;
+  const index = findBooks(id);
+  livros.splice(index, 1);
+  res.json(`Libro ${id} removido com sucesso`);
 });
 
 function findBooks(id) {
