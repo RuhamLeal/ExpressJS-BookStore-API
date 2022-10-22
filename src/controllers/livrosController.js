@@ -24,7 +24,7 @@ class LivroController {
 
     livro.save((err) => {
       if(err) {
-        res.status(500).send({ message: `${err.message} - falha ao cadastras livro.` });
+        res.status(500).send({ message: `${err.message} - falha ao cadastrar livro.` });
       } else {
         res.status(201).send(livro.toJSON());
       };
@@ -54,9 +54,6 @@ class LivroController {
       };
     });
   }
-
 }
-
-
 
 export default LivroController;
