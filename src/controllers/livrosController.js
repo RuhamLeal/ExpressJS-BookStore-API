@@ -4,34 +4,29 @@ class LivroController {
   static showBooks = (req, res) => {
     livros.find()
       .populate('autor')
-      .exec((err, livros) => {
-      res.status(200).json(livros);
-    });
+      .exec((err, livros) => res.status(200).json(livros));
   }
 
   static showBookByID = (req, res) => {
-    const id = req.params.id;
+    const { id } = req.params;
 
     livros.findById(id)
       .populate('autor', 'nome')
       .exec((err, livros) => {
       if(err) {
         res.status(400).send({ message: `${err.message} - ID do livro nao localizada ou inexistente` });
-      } else {
-        res.status(200).send(livros);
-      };
+      } else res.status(200).send(livros);
     });
   }
 
   static showBooksByPublisher = (req, res) => {
-    const publisher = req.query.editora
+    const { editora } = req.query;
 
-    livros.find({ "editora": publisher }, {}, (err, livros) => {
+    livros.find({ "editora": editora }, {}, (err, livros) => {
       if(err) {
         res.status(400).send({ message: `${err.message} - Livro(s) nao localizado(s) ou inexistente(s)` })
-      }
-      res.status(200).send(livros);
-    })
+      } else res.status(200).send(livros);
+    });
   }
 
   static registerBook = (req, res) => {
@@ -40,14 +35,12 @@ class LivroController {
     livro.save((err) => {
       if(err) {
         res.status(500).send({ message: `${err.message} - falha ao cadastrar livro.` });
-      } else {
-        res.status(201).send(livro.toJSON());
-      };
+      } else res.status(201).send(livro.toJSON());
     });
   }
 
   static updateBook = (req, res) => {
-    const id = req.params.id;
+    const { id } = req.params;
 
     livros.findByIdAndUpdate(id, { $set: req.body }, (err) => {
       if(err) {
@@ -59,7 +52,7 @@ class LivroController {
   }
 
   static deleteBook = (req, res) => {
-    const id = req.params.id;
+    const { id } = req.params;
 
     livros.findByIdAndDelete(id, (err) => {
       if(err) {
