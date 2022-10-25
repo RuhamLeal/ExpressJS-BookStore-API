@@ -1,6 +1,15 @@
 # BookStore-API
 
-An API that sends book and author data, works with GET, PUT, DELETE and POST requests.
+An API that sends book and author data, works with GET, PUT, DELETE and POST requests.    
+
+
+# Table of contents
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [More Info](#more-info)
+- [Contact](#contact)
 
 ## Getting Started
 
@@ -37,10 +46,10 @@ $ npm install
 ```
 ### More Info
 
-This Project will wad done with node.js, express.js, mongoDb(mongoose) and MSC architecture.
+This Project will was done with node.js, express.js, mongoDb(mongoose) and MSC architecture.
 
 ### Contact
 
 Ruham Leal    
 Email: ruhamxlpro@hotmail.com    
-Linkedin: https://www.linkedin.com/in/ruham-leal-dos-santos-sutil-38a837243/    
+Linkedin: https://www.linkedin.com/in/ruham-leal-dos-santos-sutil-38a837243/
