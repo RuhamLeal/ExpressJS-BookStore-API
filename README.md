@@ -26,7 +26,7 @@ node 16.15.1 version
 ```
 
 Clone the repo:   
-$ git@github.com:RuhamLeal/ExpressJS-BookStore-API.git    
+$ git clone git@github.com:RuhamLeal/ExpressJS-BookStore-API.git    
 
 Go to project folder:     
 $ cd ExpressJS-BookStore-API     
