@@ -25,6 +25,6 @@ $ npm install
 ```
 ### Contact
 
-Ruham Leal
-Email: ruhamxlpro@hotmail.com
-Linkedin: https://www.linkedin.com/in/ruham-leal-dos-santos-sutil-38a837243/
+Ruham Leal    
+Email: ruhamxlpro@hotmail.com    
+Linkedin: https://www.linkedin.com/in/ruham-leal-dos-santos-sutil-38a837243/    
