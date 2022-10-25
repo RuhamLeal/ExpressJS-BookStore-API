@@ -35,6 +35,10 @@ Install dependencies:
 $ npm install
 
 ```
+### More Info
+
+This Project will wad done with node.js, express.js, mongoDb(mongoose) and MSC architecture.
+
 ### Contact
 
 Ruham Leal    
