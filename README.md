@@ -46,7 +46,7 @@ $ npm install
 ```
 ### More Info
 
-This Project will was done with node.js, express.js, mongoDb(mongoose) and MSC architecture.
+This Project will was done with node.js, express.js, mongoDb(mongoose) and MVC architecture.
 
 ### Contact
 
