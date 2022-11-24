@@ -26,7 +26,7 @@ find book by ID: http://15.228.199.125:3000/livros/${id}
 find author by ID: http://15.228.199.125:3000/livros/${id}      
 find book by publisher: http://15.228.199.125:3000/livros/busca?editora=${publisherName}
 
-### The project has more endpoints, install the repo and see more !
+### The project has more features, install the repo and see more !
 
 ### Prerequisites
 
