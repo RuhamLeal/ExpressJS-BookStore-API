@@ -17,14 +17,14 @@ To access the api you need to go to your preferred browser and request the api u
 
 Note: Because the API is public I removed the PUT and POST methods to avoid compromising the API, but here in the repository it's complete :)
 
-API url: http://15.228.199.125:3000    
+API url: http://18.229.143.23:3000    
 
 ENDPOINTS:    
-authors: http://15.228.199.125:3000/autores to show all author data.    
-books: http://15.228.199.125:3000/livros to show all books data     
-find book by ID: http://15.228.199.125:3000/livros/${id}      
-find author by ID: http://15.228.199.125:3000/livros/${id}      
-find book by publisher: http://15.228.199.125:3000/livros/busca?editora=${publisherName}
+authors: http://18.229.143.23:3000/autores to show all author data.    
+books: http://18.229.143.23:3000/livros to show all books data     
+find book by ID: http://18.229.143.23:3000/livros/${id}      
+find author by ID: http://18.229.143.23:3000/livros/${id}      
+find book by publisher: http://18.229.143.23:3000/livros/busca?editora=${publisherName}
 
 ### The project has more features, install the repo and see more !
 
